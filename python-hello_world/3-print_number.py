@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-location = 98
-print(f"{location} Battery street")
+number = 98
+print(f"{number} Battery street")
