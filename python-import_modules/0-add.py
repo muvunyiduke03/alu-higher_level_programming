@@ -7,8 +7,5 @@ if __name__ == "__main__":
 
     a = 1
     b = 2
-
-    real_add_result = add(a, b)
-    fake_add_result = fake_add(a, b)
-
-    print("{} + {} = {}\nFake add: {} - {}".format(a, b, real_add_result, a, b, fake_add_result))
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    
