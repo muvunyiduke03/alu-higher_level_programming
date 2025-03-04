@@ -6,4 +6,4 @@ if __name__ == "__main__":
     result = 0
     for arg in argv:
         result += int(arg)
-    print (result)
+    print(result)
