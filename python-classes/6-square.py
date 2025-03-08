@@ -34,9 +34,11 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if (type(value) is not tuple or len(value) != 2 or
+        if (
+            type(value) is not tuple or len(value) != 2 or
             type(value[0]) is not int or type(value[1]) is not int or
-            value[0] < 0 or value[1] < 0):
+            value[0] < 0 or value[1] < 0
+        ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -48,7 +50,7 @@ class Square:
         """
         Print the square using the character '#' considering the position.
 
-        If size is 0, print an empty line.
+        If size is 0, an empty line is printed.
         """
         if self.__size == 0:
             print("")
@@ -57,6 +59,6 @@ class Square:
         # Print the vertical offset.
         for _ in range(self.__position[1]):
             print("")
-        # Print each line of the square preceded by the horizontal offset.
+        # Print each row of the square with horizontal offset.
         for _ in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
