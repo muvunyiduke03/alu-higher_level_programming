@@ -2,15 +2,14 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    count = 0
+    nb_print = 0
     for i in range(x):
         try:
-            element = my_list[i]
-            print("{:d}",format(element), end="")
-            count += 1
+            print("{:d}".format(my_list[i]), end="")
+            nb_print += 1
         except IndexError:
             raise
         except Exception:
             continue
     print("")
-    return count
+    return nb_print
