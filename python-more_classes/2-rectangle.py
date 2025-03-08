@@ -8,6 +8,7 @@ and includes property methods to retrieve and validate dimensions.
 It also provides methods to calculate area and perimeter.
 """
 
+
 class Rectangle:
     """A class that defines a rectangle"""
 
@@ -15,6 +16,7 @@ class Rectangle:
         """Initialize the rectangle with optional width and height"""
         self.width = width
         self.height = height
+
     @property
     def width(self):
         """Retrieve the width"""
@@ -42,6 +44,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
     def area(self):
         """Return the area of the rectangle"""
         return self.__width * self.__height
