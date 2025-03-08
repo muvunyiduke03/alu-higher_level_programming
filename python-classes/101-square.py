@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 class Square:
     """
     A class used to represent a Square
@@ -111,5 +109,30 @@ class Square:
 
     def my_print(self):
         """
-        Prints the square with the character #, considering position and size"
+        Prints the square with the character #, considering position and size
         """
+        if self.__size == 0:
+            print("")
+            return
+        for i in range(self.__position[1]):
+            print("")
+        for i in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
+
+    def __str__(self):
+        """
+        Returns a string representation of the square for printing
+
+        Returns
+        -------
+        str
+            The square as a string
+        """
+        if self.__size == 0:
+            return ""
+        result = ""
+        for i in range(self.__position[1]):
+            result += "\n"
+        for i in range(self.__size):
+            result += " " * self.__position[0] + "#" * self.__size + "\n"
+        return result.strip()
