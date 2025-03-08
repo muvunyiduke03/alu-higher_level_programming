@@ -8,6 +8,7 @@ The Rectangle class allows instantiation with optional width and height,
 and includes property methods to retrieve and validate dimensions.
 """
 
+
 class Rectangle:
     """A class that defines a rectangle"""
 
@@ -15,6 +16,7 @@ class Rectangle:
         """Initialize the rectangle with optional width and height"""
         self.width = width
         self.height = height
+    
     @property
     def width(self):
         """Retrieve the width"""
