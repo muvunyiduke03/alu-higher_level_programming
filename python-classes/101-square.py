@@ -1,24 +1,15 @@
 #!/usr/bin/python3
-"""
-This module defines a class Square that represents a square with a
-private size and a private position.
-"""
 
 
 class Square:
-    """
-    Represents a square defined by its size and its position.
-    """
-
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
-
+    
     @property
     def size(self):
-        """Retrieve the size of the square."""
         return self.__size
-
+    
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
@@ -26,60 +17,34 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
+    
     @property
     def position(self):
-        """Retrieve the position of the square."""
         return self.__position
-
+    
     @position.setter
     def position(self, value):
-        if (
-            not isinstance(value, tuple) or len(value) != 2 or
-            not isinstance(value[0], int) or not isinstance(value[1], int) or
-            value[0] < 0 or value[1] < 0
-        ):
+        if not isinstance(value, tuple) or len(value) != 2 or not all(isinstance(i, int) and i >=0 for i in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
-
+    
     def area(self):
-        """Return the current square area."""
         return self.__size ** 2
-
+    
     def my_print(self):
-        """
-        Print the square using the character '#' considering the position.
-
-        If size is 0, print an empty line.
-        """
         if self.__size == 0:
             print("")
             return
-
-        # Print the vertical offset.
-        for _ in range(self.__position[1]):
+        for i in range(self.__position[1]):
             print("")
-
-        # Print each row of the square with horizontal offset.
-        for _ in range(self.__size):
+        for i in range(self.__size):
             print(" " * self.__position[0] + "#" * self.__size)
-
     def __str__(self):
-        """
-        Return a string representation of the square for printing.
-        This ensures that printing the Square instance will have
-        the same behavior as my_print().
-        """
         if self.__size == 0:
-            return "\n"
-
-        result = []
-        # Add vertical offset.
-        for _ in range(self.__position[1]):
-            result.append("")
-
-        # Add the rows of the square with horizontal offset.
-        for _ in range(self.__size):
-            result.append(" " * self.__position[0] + "#" * self.__size)
-
-        return "\n".join(result)
+            return ""
+        result = ""
+        for i in range(self.__position[1]):
+            result += "\n"
+        for i in range(self.__size):
+            result += " " * self.__position[0] + "#" * self.__size + "\n"
+        return result.strip()  
