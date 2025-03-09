@@ -4,6 +4,8 @@
 Module that defines a Rectangle class.
 This module provides a Rectangle class with attributes for width and height,
 and methods to calculate area, perimeter, and string representations.
+Additionally, it includes a static method to determine the larger rectangle
+based on area.
 """
 
 
