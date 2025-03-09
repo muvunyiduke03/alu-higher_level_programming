@@ -9,6 +9,7 @@ It also provides methods to calculate area and perimeter, and a string
 representation method to visualize the rectangle.
 """
 
+
 class Rectangle:
     """This class defines a rectangle"""
 
@@ -69,6 +70,7 @@ class Rectangle:
     def __repr__(self):
         """Return a stringrepresentation that can recreate an instance"""
         return f"Rectangle({self.__width}, {self.__height})"
+    
     def __del__(self):
         """Print a message when an instance is deleted and decrement count"""
         print("Bye rectangle...")
