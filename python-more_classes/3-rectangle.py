@@ -16,6 +16,7 @@ class Rectangle:
         """Initialize the rectangle with optional width and height"""
         self.width = width
         self.height = height
+
     @property
     def width(self):
         """Retrieve the width"""
