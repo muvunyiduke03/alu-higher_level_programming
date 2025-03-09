@@ -64,6 +64,10 @@ class Rectangle:
             return ""
         return "\n".join(str(self.print_symbol) * self.__width for _ in range(self.__height))
 
+    def __repr__(self):
+        """Returns a string representation for recreating a new instance"""
+        return f"Rectangle({self.__width}, {self.__height})"
+
     def __del__(self):
         """Handles the deletion of a rectangle instance"""
         Rectangle.number_of_instances -= 1
@@ -76,7 +80,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of rectangle")
-        if rect_1.area() >= rect_2.are():
+        if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
 
