@@ -18,8 +18,10 @@ class Rectangle(BaseGeometry):
         Initializes a Rectangle instance.
 
         Args:
-            width (int): The width of the rectangle, must be a positive integer.
-            height (int): The height of the rectangle, must be a positive integer.
+            width (int): The width of the rectangle,
+            must be a positive integer.
+            height (int): The height of the rectangle,
+            must be a positive integer.
         """
         self.integer_validator("width", width)
         self.__width = width
