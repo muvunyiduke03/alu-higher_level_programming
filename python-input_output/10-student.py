@@ -5,12 +5,12 @@ Defines a class Student with public attributes and a method
 to retrieve a dictionary representation of the object, with optional filtering.
 """
 
+
 class Student:
     """
     Defines a student by:
     - Public instance attributes: first_name, last_name, and age
     """
-
 
     def __init__(self, first_name, last_name, age):
         """
@@ -24,6 +24,7 @@ class Student:
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
+
     def to_json(self, attrs=None):
         """
         Retrieves a dictionary representation of a Student instance.
@@ -37,6 +38,8 @@ class Student:
         Returns:
             dict: The dictionary representation of the instance.
         """
-        if isinstance(attrs, list) and all(isinstance(attr, str) for attr in attrs):
-            return {attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)}
+        if isinstance(attrs, list) and all(isinstance(attr, str)
+                                            for attr in attrs):
+            return {attr: getattr(self, attr) for attr in attrs
+                     if hasattr(self, attr)}
         return self.__dict__
