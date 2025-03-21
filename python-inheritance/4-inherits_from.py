@@ -8,7 +8,8 @@ that inherited (directly or indirectly) from the specified class.
 
 def inherits_from(obj, a_class):
     """
-    Checks if obj is an instance of a class that inherited (directly or indirectly)
+    Checks if obj is an instance of a
+    class that inherited (directly or indirectly)
     from the specified class.
 
     Args:
