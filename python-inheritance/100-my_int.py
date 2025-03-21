@@ -11,7 +11,7 @@ class MyInt(int):
     A rebel integer class that inverts the behavior of == and != operators.
     """
 
-    def __eq__(self, value):
+    def __eq__(self, other):
         """
         Overrides the equality operator (==).
 
