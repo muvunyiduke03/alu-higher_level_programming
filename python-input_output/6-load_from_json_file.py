@@ -16,5 +16,5 @@ def load_from_json_file(filename):
         object: The Python data structure represented by the JSON file.
     """
     import json
-    with open(filenamr, "r", encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         return json.load(f)
