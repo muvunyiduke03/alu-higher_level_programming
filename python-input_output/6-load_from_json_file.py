@@ -10,7 +10,8 @@ def load_from_json_file(filename):
     Creates an object from a JSON file.
 
     Args:
-        filename (str): The name of the file containing the JSON representation.
+        filename (str): The name of the file containing
+        the JSON representation.
 
     Returns:
         object: The Python data structure represented by the JSON file.
