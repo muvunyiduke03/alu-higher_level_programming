@@ -39,7 +39,7 @@ class Student:
             dict: The dictionary representation of the instance.
         """
         if isinstance(attrs, list) and all(isinstance(attr, str)
-                                        for attr in attrs):
+        for attr in attrs):
             return {attr: getattr(self, attr) for attr in attrs
-                     if hasattr(self, attr)}
+        if hasattr(self, attr)}
         return self.__dict__
