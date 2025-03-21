@@ -7,6 +7,9 @@ the list sorted in ascending order.
 class Mylist(list):
     """
     A custom list class that extends the built-in list.
+
+    This class includes an additional method to print a sorted version
+    of the list without modifying the original list.
     """
 
     def print_sorted(self):
