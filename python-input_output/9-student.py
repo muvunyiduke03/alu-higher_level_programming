@@ -6,7 +6,7 @@ to retrieve a dictionary representation of the object.
 """
 
 
-class student:
+class Student:
     """
     Defines a student by:
     - Public instance attributes: first_name, last_name, and age
