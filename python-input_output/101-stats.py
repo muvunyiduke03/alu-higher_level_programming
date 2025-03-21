@@ -8,6 +8,7 @@ This script reads stdin line by line and computes metrics:
 
 import sys
 
+
 def print_stats(total_size, status_counts):
     """
     Prints the current statistics.
@@ -35,7 +36,6 @@ if __name__ == "__main__":
                 file_size = int(parts[-1])
                 total_size += file_size
 
-
                 status_code = parts[-2]
                 if status_code in valid_codes:
                     if status_code not in status_counts:
@@ -43,7 +43,6 @@ if __name__ == "__main__":
                     status_counts[status_code] += 1
             except (IndexError, ValueError):
                 pass
-
 
             if line_count % 10 == 0:
                 print_stats(total_size, status_counts)
