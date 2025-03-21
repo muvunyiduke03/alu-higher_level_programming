@@ -13,7 +13,7 @@ class Rectangle(BaseGeometry):
     Inherits from BaseGeometry.
     """
 
-    def __init__(self, widht, height):
+    def __init__(self, width, height):
         """
         Initializes a Rectangle instance.
 
