@@ -2,10 +2,10 @@
 
 const args = process.argv.length - 2;
 
-if (argv === 0) {
+if (args === 0) {
 	console.log('No argument');
 }
-else if (argv === 1) {
+else if (args === 1) {
 	console.log('Argument found');
 }
 else {
