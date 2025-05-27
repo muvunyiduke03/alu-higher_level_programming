@@ -11,4 +11,3 @@ if (isNaN(square)) {
     console.log(row);
   }
 }
- 
