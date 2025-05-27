@@ -8,7 +8,7 @@ const myObject = {
   }
 };
 
-console.log(myObject);
+console.log({type: 'object', value: 12});
 myObject.incr();
 console.log(myObject);
 myObject.incr();
