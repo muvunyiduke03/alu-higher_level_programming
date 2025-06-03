@@ -15,10 +15,9 @@ request(apiUrl, (error, response, body) => {
     console.error(error);
     return;
   }
-
   try {
     const movie = JSON.parse(body);
-    const characters = movie.characters;
+    const characters = movie.characters; // array of URLs
 
     let count = 0;
     const names = new Array(characters.length);
@@ -42,7 +41,6 @@ request(apiUrl, (error, response, body) => {
         }
       });
     });
-
   } catch (e) {
     console.error(e);
   }
