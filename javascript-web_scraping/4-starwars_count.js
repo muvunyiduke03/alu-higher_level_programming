@@ -3,7 +3,6 @@
 const request = require('request');
 
 const apiUrl = process.argv[2];
-const wedgeId = 'https://swapi-api.alx-tools.com/api/people/18/';
 
 request(apiUrl, (error, response, body) => {
   if (error) {
@@ -16,7 +15,9 @@ request(apiUrl, (error, response, body) => {
     let count = 0;
 
     data.results.forEach(film => {
-      if (film.characters.includes(wedgeId)) {
+      if (
+        film.characters.some(characterUrl => characterUrl.endsWith('/18/'))
+      ) {
         count++;
       }
     });
