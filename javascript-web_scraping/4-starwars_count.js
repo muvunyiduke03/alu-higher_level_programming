@@ -11,14 +11,19 @@ request(apiUrl, (error, response, body) => {
     return;
   }
 
-  const data = JSON.parse(body);
-  let count = 0;
+  try {
+    const data = JSON.parse(body);
+    const film = data.results || [];
+    let count = 0;
 
-  for (const film of data.results) {
-    if (film.characters.includes(wedgeUrl)) {
-      count++;
+    for (const film of films) {
+      if (film.characters.find(url => url === wedgeUrl || url.endsWith('/18/'))) {
+        count++;
+      }
     }
-  }
 
-  console.log(count);
+    console.log(count);
+  } catch (err) {
+    console.error(err);
+  }
 });
